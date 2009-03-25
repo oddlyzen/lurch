@@ -1,0 +1,3 @@
+<% var(:tasks).each do |t| %>
+  Resumed! <%= t.description %> <%= ('(' + var(:msg) + ')') unless var(:msg).nil? %>
+<% end %>

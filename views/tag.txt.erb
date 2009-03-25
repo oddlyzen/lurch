@@ -1,0 +1,7 @@
+<% if var(:success) %>
+  <% var(:tags).split(',').each do |t| %>
+    Tagged! <%= t.capitalize %>
+  <% end %>
+<% else %>
+  Error: That object does not exist.
+<% end %>
