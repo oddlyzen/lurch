@@ -26,33 +26,32 @@ class Controller < Autumn::Leaf
       var :command_prefix => command_prefix
       render :interrupt_help
     else
-      id = msg.sub!(/(\d){9}/) do |m|
+      id = msg.sub!(/(\d){7}/) do |m|
         m[0].to_i
       end
-      msg = msg.strip! 
+      msg = msg.strip!
+      tasks = []
       if id.nil?
-        tasks = []
         @@TASKS.each do |t|
           if t.user == sender
             t.pause! "Interrupted! '#{msg}'"
-            rupt = Timing::Interruption.new(:user => sender, :description => msg)
           end
+          tasks << t
         end
-        tasks << t
+        rupt = Timing::Interruption.new(:user => sender, :description => msg)
         @@INTERRUPTIONS << rupt
       else
-        tasks = []
         @@TASKS.each do |t|
           if t.user == sender && t.id == id
             t.pause! "Interrupted! '#{msg}'"
             rupt = Timing::Interruption.new(:user => sender, :description => msg)
+            @@INTERRUPTIONS << rupt
           end
           tasks << t
-          @@INTERRUPTIONS << rupt
         end
-        var :tasks => tasks
-        var :msg => msg
       end
+      var :tasks => tasks
+      var :msg => msg
     end
   end
   
@@ -157,20 +156,30 @@ class Controller < Autumn::Leaf
   
   def end_all(sender, msg)
     records = []
-    @@INTERRUPTIONS.each do |i|
-      if i.user == sender
-        i.end! "#{msg}"
-        records << i unless records.include? i
-        @@INTERRUPTIONS.delete i
+    all = [@@INTERRUPTIONS, @@TASKS]
+    all.each do |a|
+      a.each do |t|
+        if t.user == sender
+          t.end! "#{msg}"
+          a.delete t
+          records << t unless records.include? t
+        end
       end
     end
-    @@TASKS.each do |t|
-      if t.user == sender
-        records << t unless records.include? t
-        t.end! "#{msg}"
-        @@TASKS.delete t
-      end
-    end
+    # @@INTERRUPTIONS.each do |i|
+    #   if i.user == sender
+    #     i.end! "#{msg}"
+    #     records << i unless records.include? i
+    #     @@INTERRUPTIONS.delete i
+    #   end
+    # end
+    # @@TASKS.each do |t|
+    #   if t.user == sender
+    #     records << t unless records.include? t
+    #     t.end! "#{msg}"
+    #     @@TASKS.delete t
+    #   end
+    # end
     records
   end
   
