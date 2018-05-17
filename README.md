@@ -1,5 +1,5 @@
 ## Lurch, an Autumn Leaf
-### Copyright 2009 (ZepFrog Corp.), by Mark Coates and Noah Sussman
+###### Copyright 2009 (ZepFrog Corp.), by Mark Coates and Noah Sussman
 
 ![Image of Lurch](https://media.giphy.com/media/zUJbUzNeMhelW/giphy.gif) 
 
