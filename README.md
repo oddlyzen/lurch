@@ -1,7 +1,7 @@
-## Lurch, an Autumn Leaf (http://github.com/oddlyzen/autumn/tree/master)
+## Lurch, an Autumn Leaf
 ### Copyright 2009 (ZepFrog Corp.), by Mark Coates and Noah Sussman
 
-Lurch is an IRC bot that makes it easy to log time spent on tasks and the interruptions to said tasks using the Slim Timer API and the Autumn IRC Bot Framework. The name has a double-meaning, of course, as it references the Addams' Family character and the on-and-off pace of a workday filled with distractions.
+Lurch is an IRC bot that makes it easy to log time spent on tasks and the interruptions to said tasks using the Slim Timer API and the (Autumn IRC Bot Framework)[(http://github.com/oddlyzen/autumn/tree/master)]. The name has a double-meaning, of course, as it references the Addams' Family character and the on-and-off pace of a workday filled with distractions.
 
 Lurch was the Addams-family butler, but they treated him as part of the clan. He was fast--often demonstrating a prescience that was uncanny and entertaining, answering with his ever-faithful, "You *rang*?"  Lurch is meant to be your personal time-butler in your favorite IRC channel.  Ours is #zepinvest (chat.us.freenode.net).
 
