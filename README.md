@@ -21,14 +21,11 @@ That's how our workflow sometimes goes. We start coding, and suddenly someone wa
 
 Lurch all that.  All you need to do is get a free Slim Timer account (http://slimtimer.com). Once you login, you will see a tab named 'API'. Click on that and get yourself an API key.  It's fast. It's free. It's legal. It's fun.  Then you just need to add a `config.yml` to Lurch's root directory.  It's contents should be something like:
 
-```--- 
+```ruby 
 st_password: password
 st_user: user@your.com
 st_api_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 about_msg: 'You *rang*?'
-
-
----
 ```
 For more information, see http://github.com/oddlyzen/lurch/tree/master. (mark.coates@gmail.com)
