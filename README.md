@@ -29,5 +29,6 @@ st_api_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 about_msg: 'You *rang*?'
 
 
----```
+---
+```
 For more information, see http://github.com/oddlyzen/lurch/tree/master. (mark.coates@gmail.com)
