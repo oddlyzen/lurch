@@ -1,5 +1,5 @@
-Lurch, an Autumn Leaf (http://github.com/oddlyzen/autumn/tree/master)
-Copyright 2009 (ZepFrog Corp.), written by Mark Coates and Noah Sussman
+## Lurch, an Autumn Leaf (http://github.com/oddlyzen/autumn/tree/master)
+### Copyright 2009 (ZepFrog Corp.), by Mark Coates and Noah Sussman
 
 Lurch is an IRC bot that makes it easy to log time spent on tasks and the interruptions to said tasks using the Slim Timer API and the Autumn IRC Bot Framework. The name has a double-meaning, of course, as it references the Addams' Family character and the on-and-off pace of a workday filled with distractions.
 
